@@ -6,6 +6,9 @@
 </head>
 <body>
 <script>
+  //can declare values of parameters inside the function declaration and
+  //it will always default to those values when those values are undefined
+  //can override those values by passing our own arguments in
   function calculateBill(total, tax = 0.13, tip = 0.15) {
     return total + (total * tax) + (total * tip);
   }

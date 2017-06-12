@@ -6,7 +6,12 @@
 </head>
 <body>
 <script>
+
   console.log(pizza);
+  //this is the temporal dead zone, where you try to access a variable's value
+  //before it has been declared. It will not work. When using var, it will give you
+  //undefined, because the script knows that the variable exists, but the value can't
+  //be accessed yet
   const pizza = 'Deep Dish 🍕🍕🍕';
 
 </script>

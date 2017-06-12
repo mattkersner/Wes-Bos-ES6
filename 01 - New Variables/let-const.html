@@ -6,15 +6,20 @@
 </head>
 <body>
 <script>
+  //const cannot be reassigned
   const key = 'abc123';
+  //let is block scoped and is meant to be changed/updated
   let points = 50;
   let winner = false;
 
+  //can still change properties of the object, but not the object itself.
+  //person = { name: 'Wesley' } will not work. But person.name = 'Wesley' will.
   const person = {
     name: 'Wes',
     age: 28
   }
 
+  //object.freeze stops any key value pairs of the object from being changed
   const wes = Object.freeze(person);
 
 </script>

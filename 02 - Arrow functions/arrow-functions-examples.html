@@ -10,10 +10,13 @@
 const race = '100m Dash';
 const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
 
+//returning an object with a fat arrow function, implicit return, take note of the
+//variable race, since the key value pair is the same, you can just list race once
 const win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
 
 const ages = [23,62,45,234,2,62,234,62,34];
 
+//if the age is greater than 60 evaluates to true, it will add it to the old variable
 const old = ages.filter(age => age >= 60);
 console.log(old);
 

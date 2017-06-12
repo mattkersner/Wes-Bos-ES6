@@ -6,11 +6,17 @@
 </head>
 <body>
 <script>
+//const keeps name in block scope, if run in dev tools, name will log "", which is the
+//windows property name. But the log in the block scope will print wes
   {
     const name = 'wes';
     console.log(name);
   }
 
+  //let keeps the variable i in block scope, so the setTimeout function will log
+  //every number from 0-9. If it was a var, the setTimeout would only log the
+  //number is 10, because the loop finishes before the setTimeout runs and the variable
+  //has leaked into the global scope by then as a value of 10
   for(let i = 0; i < 10; i++) {
     console.log(i);
     setTimeout(function() {

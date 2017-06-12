@@ -45,6 +45,7 @@
 
   // When you need arguments object
   const orderChildren = function() {
+    //this will create an array of all the arguments that were passed into the function
     const children = Array.from(arguments);
     return children.map((child, i) => {
       return `${child} was child #${i + 1}`;

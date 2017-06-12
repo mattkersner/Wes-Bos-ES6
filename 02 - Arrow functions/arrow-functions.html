@@ -16,14 +16,20 @@
     return `${name} bos`;
   });
 
+  //no need to have the parens around the function in fat arrow if there is only one
+  //parameter
   const fullNames3 = names.map(name => {
     return `${name} bos`;
   });
 
+  //with no curly brackets it is an implicit return which means we do not need to specify
+  // that we are returning the name, it automatically does it
   const fullNames4 = names.map(name => `${name} bos`);
 
+  //if no arguments at all, you can use parens with no parameter
   const fullNames5 = names.map(() => `cool bos`);
 
+  //declaritive function
   const sayMyName = (name) => {
     alert(`Hello ${name}!`)
   }

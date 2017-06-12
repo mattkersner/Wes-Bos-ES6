@@ -66,11 +66,17 @@
       let first = 'opening';
       let second = 'open';
 
+      //if the classlist already contains first, then we need to switch the order
+      //of the animation, this is achieved by switching the order of the variables
       if(this.classList.contains(first)) {
         [first, second] = [second, first];
       }
 
       this.classList.toggle(first);
+      //using the fat arrow here is important, it keeps the this keyword bound to
+      //the variable box. If it was a regular function, it would reassign the this
+      //keyword to the setTimeout function's parent element, which is the window
+      //and then we'll get a "cant toggle undefined" error
       setTimeout(() => {
         console.log(this);
         this.classList.toggle(second);

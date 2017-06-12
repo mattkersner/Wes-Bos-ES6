@@ -18,6 +18,8 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/0.8.2/purify.min.js"></script>
 <script>
+  //uses the dompurify library. sanitize means to clean out any user input to look for 
+  //trying to run javascript or something of the sort
   function sanitize(strings, ...values) {
     const dirty = strings.reduce((prev, next, i) => `${prev}${next}${values[i] || ''}`, '');
     return DOMPurify.sanitize(dirty);
