@@ -16,6 +16,17 @@
     return converted;
   }
 
+  const hundo = convertCurrency(100);
+  console.log(hundo);
+
+  //can also use destructuring, variables could be declared in any order
+  const { AUD, USD, MEX, GPB } = convertCurrency(100);
+  //now we have variables associated with each key value pair in the object
+
+  //the = {} at the end will allow us to just call tipCalc and it will
+  //default the destructured object to build inside the blank object
+  //if we don't have that and just try tipCalc() it will throw an error because
+  //there was nothing to destructure
   function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
     return total + (tip * total) + (tax * total);
   }

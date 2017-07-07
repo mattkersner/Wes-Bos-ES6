@@ -14,6 +14,9 @@
     twitter: '@wesbos'
   };
 
+  // this is the destructuring syntax, this is saying give me variables
+  // called first, last and twitter and assign them to the person object values
+  // associated with those keys
   const { first, last, twitter } = person;
 
   const wes = {
@@ -30,7 +33,11 @@
     }
   };
 
+  // in this destructuring, we are grabbing the values nested
+  // into wes.links.social and assigning wes.links.social.twitter to
+  // the variable tweet and wes.links.social.facebook to the variable fb
   const { twitter: tweet, facebook: fb } = wes.links.social;
+
 
   const settings = { width: 300, color: 'black' }  // height, fontSize
   const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings;

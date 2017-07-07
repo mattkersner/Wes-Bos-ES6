@@ -16,12 +16,24 @@ const model = 'x5';
 const colour = 'Royal Blue';
 
 // .startsWith()
+course.startsWith('RFB'); //will return true
+flightNumber.startsWith('AC') //will return false
+
+//but we can add a second argument that tells it how far into the string to start checking
+flightNumber.startsWith('AC', 3) //will return true
 
 // .endsWith()
+flightNumber.endsWith('jz'); //will return true
+accountNumber.endsWith('RT'); //will return false
 
-// .includes()
+// in a similar way, we can add the second argument which will specify how many total characters to check
+// since the first 11 characters in the string ends with RT, this will return true
+accountNumber.endsWith('RT', 11); //will return true
 
-// .repeat()
+// .includes() - will check to see if the argument is anywhere in the string
+flightNumber.includes('AC'); //will return true
+
+// .repeat() - allows you to take a string and repeat it x number of times
 
 function leftPad(str, length = 20) {
   return `→ ${' '.repeat(length - str.length)}${str}`;

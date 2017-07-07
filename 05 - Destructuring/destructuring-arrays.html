@@ -7,15 +7,26 @@
 <body>
 <script>
   const details = ['Wes Bos', 123, 'wesbos.com'];
+  //desctructuring an array, will pull values from details array and assign
+  //values to the variables specified
   const [name, id, website] = details;
   console.log(name, id, website);
 
+  //can split the data on commas and then destructure the array to assign
+  //the values to the variables specified
+  // when there are extra values on the end of the array that aren't
+  //accounted for in the destructuring, they will just ignore them
   const data = 'Basketball,Sports,90210,23,wes,bos,cool';
   const [itemName, category, sku, inventory] = data.split(',');
+  console.log(itemName, category, sku, inventory);
 
+  // if we want to account for the extra values, we can use the spread
+  // operator to enter the rest into the variable as an array of the three names
   const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
 
   const [captain, assistant, ...players] = team;
+
+  console.log(players); // gives ["Sarah", "Keegan", "Riker"]
 
 </script>
 </body>
